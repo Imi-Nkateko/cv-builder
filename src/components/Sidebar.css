@@ -1,0 +1,16 @@
+nav {
+	background-color: rgb(126, 178, 255);
+	display: flex;
+	flex-direction: column;
+}
+
+li {
+	list-style: none;
+}
+
+ul {
+	display: grid;
+	gap: 10px;
+
+}
+
