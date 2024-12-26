@@ -1,11 +1,12 @@
 import "./App.css";
-
-
+import Header from "./components/Header";
+import CvEdit from "./components/CvEdit";
 
 const App = () => {
   return (
 	<div>
-	  hello
+	  <Header/>
+	  <CvEdit/>
 	</div>
   )
 }
