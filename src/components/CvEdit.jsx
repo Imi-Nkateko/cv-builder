@@ -1,11 +1,18 @@
 import GeneralInfo from "./form components/GeneralInfo";
 
-const CvEdit = () => {
-  return (
+
+const CvEdit = ({setPersonInfo}) => {
+	
+
+	const handleChange = (field, value) => {
+		setPersonInfo((prev) => ({ ...prev, [field]: value })); // Update specific field
+	};
+	return (
 		<div>
-			<GeneralInfo />
+			<GeneralInfo onChange={handleChange} />
+
 		</div>
 	);
-}
+};
 
-export default CvEdit
+export default CvEdit;

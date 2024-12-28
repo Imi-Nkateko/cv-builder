@@ -1,15 +1,28 @@
 import "./styles.css"
-import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+
+const Header = ({personInfo}) => {
+	const navigate = useNavigate();
+
+const handlePreviewClick = () => {
+	navigate("/preview", { state: { data: personInfo } }); // Pass data via state
+};
+
 	return (
 		<header>
 			<h1>Cv Builder:</h1>
-			<div className="btn-container">
-				<Button title={"Cv Edit"} />
-				<Button title={"Preview Cv"} />
-				<Button title={"Example Cv"} />
-			</div>
+			<ul>
+				<li>
+					<a href="./CvEdit.jsx">Edit Cv</a>
+				</li>
+				<li>
+					<button onClick={handlePreviewClick}>Preview Cv</button>
+				</li>
+				<li>
+					<button onClick={handlePreviewClick}>Preview Cv</button>
+				</li>
+			</ul>
 		</header>
 	);
 };

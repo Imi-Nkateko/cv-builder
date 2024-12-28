@@ -2,11 +2,25 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: slategray;
+	background-color:  #970747;
 	padding: 1rem 2rem;
 }
 
-Button {
-    padding: 4px 8px;
-    margin-right: 4px;
+ul {
+	display: flex;
+	gap: 1rem;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+a:hover {
+	color:  #ec84b3;
 }

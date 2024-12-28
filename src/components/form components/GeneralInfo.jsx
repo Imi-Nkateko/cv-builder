@@ -2,7 +2,12 @@ import Input from "./Input";
 import About from "./About";
 import "./GeneralInfo.css";
 
-const GeneralInfo = () => {
+const GeneralInfo = ({ onChange }) => {
+	const handleInputChange = (e) => {
+		const { name, value } = e.target; // Use input's `name` attribute to identify the field
+		onChange(name, value);
+	};
+	// Update the specific field in parent state
 	return (
 		<div className="generalInfo">
 			<div className="head">
@@ -19,51 +24,84 @@ const GeneralInfo = () => {
 				<div className="fullname">
 					<label htmlFor="firstName">
 						FirstName
-						<Input placeholder={"Enter Name"} />
+						<Input
+							placeholder={"Enter Name"}
+							name={"firstName"}
+							onChange={handleInputChange}
+						/>
 					</label>
 					<label htmlFor="lastName">
 						LastName
-						<Input placeholder={"Enter LastName"} />
+						<Input
+							placeholder={"Enter LastName"}
+							name={"lastName"}
+							onChange={handleInputChange}
+						/>
 					</label>
 				</div>
 
 				<label htmlFor="profession">
 					Profession
-					<Input placeholder={"Profession"} />
+					<Input
+						placeholder={"Profession"}
+						name={"profession"}
+						onChange={handleInputChange}
+					/>
 				</label>
 
 				<label htmlFor="address">
 					Address
-					<Input placeholder={"Enter Address"} />
+					<Input
+						placeholder={"Enter Address"}
+						name={"address"}
+						onChange={handleInputChange}
+					/>
 				</label>
 
 				<div className="contact-container">
 					<label htmlFor="linkedIn">
 						LinkedIn
-						<Input placeholder={"Your LinkedIn"} />
+						<Input
+							placeholder={"Your LinkedIn"}
+							name={"linkedIn"}
+							onChange={handleInputChange}
+						/>
 					</label>
 
 					<label htmlFor="portfolio">
 						Portfolio
-						<Input placeholder={"Your Website"} />
+						<Input
+							placeholder={"Your Website"}
+							name={"portfolio"}
+							onChange={handleInputChange}
+						/>
 					</label>
 
 					<label htmlFor="email">
 						Email
-						<Input placeholder={"Email Address"} />
+						<Input
+							placeholder={"Email Address"}
+							name={"email"}
+							onChange={handleInputChange}
+						/>
 					</label>
 
 					<label htmlFor="phoneNumber">
 						Phone Number
-						<Input placeholder={"Your Phone Number"} />
+						<Input
+							placeholder={"Your Phone Number"}
+							name={"phone"}
+							onChange={handleInputChange}
+						/>
 					</label>
 
 					<label htmlFor="aboutMe">
 						About
 						<textarea
-							name="aboutMe"
-							id="aboutMe"
+							name="summary"
+							id="summary"
 							placeholder="Detailed description about yourself"
+							onChange={handleInputChange}
 						></textarea>
 					</label>
 				</div>

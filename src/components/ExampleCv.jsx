@@ -1,11 +1,7 @@
-import React from 'react'
+
 
 const ExampleCv = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <img src="./assets/ExampleImage.png" alt="Example Cv" />;
 }
 
 export default ExampleCv
