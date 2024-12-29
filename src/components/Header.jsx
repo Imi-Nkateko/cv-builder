@@ -1,5 +1,6 @@
 import "./styles.css"
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Header = ({personInfo}) => {
@@ -12,7 +13,9 @@ const handlePreviewClick = () => {
 	return (
 		<header>
 			<h1>Cv Builder:</h1>
-			<ul>
+			<ul> <li>
+				<Link to={"./editCv"}>Edit Cv</Link>
+			</li>
 				<li>
 					<a href="./CvEdit.jsx">Edit Cv</a>
 				</li>

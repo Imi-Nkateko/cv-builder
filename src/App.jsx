@@ -23,7 +23,7 @@ const App = () => {
 		<Router>
 			<Header personInfo={personInfo} />
 			<Routes>
-				<Route path="/edit" element={<CvEdit setPersonInfo={setPersonInfo} />} />
+				<Route path="/ " element={<CvEdit setPersonInfo={setPersonInfo} />} />
 				<Route
 					path="/preview"
 					element={<CvPreview personInfo={personInfo} />}
