@@ -20,9 +20,15 @@ const CvPreview = ({generalData}) => {
 			<section className="cv-info">
 				<div className="left-container">
 					<h2>Summary</h2>
-					<p></p>
+					<p>{generalData.about}</p>
+					<div className="education">
+						<h2>Education</h2>
+						<h3>
+							Odin Xyz <span>2010 jun - 2020</span>
+						</h3>
+						<h4>Fullstack Web Developer</h4>
+					</div>
 					<h2>Experience</h2>
-					<h2>Education</h2>
 				</div>
 				<div className="right-container">
 					<h2>Projects</h2>

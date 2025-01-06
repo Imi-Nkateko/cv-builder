@@ -5,11 +5,12 @@
 }
 
 .container {
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem;
 }
 
-.cvEdit {
+/* .cvEdit {
     display: flex;
     flex-direction: column;
-}
+} */

@@ -1,5 +1,5 @@
 .generalInfo {
-	padding: 1.5rem;
+	/* padding: 1.5rem; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -8,7 +8,7 @@
 .educationInfo,
 .experienceInfo,
 .SkillsInfo {
-	padding: 1.5rem;
+	/* padding: 1.5rem; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -16,24 +16,27 @@
 
 .educationInfoForm {
 	display: grid;
-	grid-template-columns: 2fr 2fr;
-	gap: 2rem;
+	/* gap: 2rem; */
 	border: 1px solid rgba(0, 0, 0, 0.267);
 	border-radius: 8px;
 	outline: none;
-	padding: 1rem;
-	min-width: 600px;
+	/* padding: 1rem; */
+	/* min-width: 600px; */
+}
+
+.educationInfoForm form {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
 }
 
 .experienceInfoForm {
 	display: grid;
-	grid-template-columns: 3fr 2fr;
-	gap: 2rem;
+	/* grid-template-columns: 3fr 2fr; */
+	/* gap: 2rem; */
 	border: 1px solid rgba(0, 0, 0, 0.267);
 	border-radius: 8px;
 	outline: none;
-	padding: 1rem;
-	min-width: 600px;
+
 }
 
 .SkillsInfoForm {
@@ -41,14 +44,14 @@
 	border-radius: 8px;
 	outline: none;
 	padding: 1rem;
-	min-width: 600px;
+
 }
 
 .head {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 1000px;
+
 }
 span {
 	border-radius: 50%;
