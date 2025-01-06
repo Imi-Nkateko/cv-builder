@@ -1,16 +1,16 @@
+import "../App.css";
 import GeneralInfo from "./form components/GeneralInfo";
+import EducationInfo from "./form components/EducationInfo";
+import ExperienceInfo from "./form components/ExperienceInfo";
+import Skills from "./form components/Skills";
 
-
-const CvEdit = ({setPersonInfo}) => {
-	
-
-	const handleChange = (field, value) => {
-		setPersonInfo((prev) => ({ ...prev, [field]: value })); // Update specific field
-	};
+const CvEdit = ({onChange}) => {
 	return (
-		<div>
-			<GeneralInfo onChange={handleChange} />
-
+		<div className="cvEdit">
+			<GeneralInfo onChange={onChange}/>
+			<EducationInfo />
+			<ExperienceInfo/>
+			<Skills/>
 		</div>
 	);
 };

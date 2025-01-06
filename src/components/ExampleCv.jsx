@@ -1,7 +1,7 @@
 
 
-const ExampleCv = () => {
-  return <img src="./assets/ExampleImage.png" alt="Example Cv" />;
-}
+// const ExampleCv = () => {
+//   return <img src="./assets/ExampleImage.png" alt="Example Cv" />;
+// }
 
-export default ExampleCv
+// export default ExampleCv

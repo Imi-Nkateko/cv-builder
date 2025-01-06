@@ -1,24 +1,19 @@
 import Input from "./Input";
-import About from "./About";
+
 import "./GeneralInfo.css";
 
 const GeneralInfo = ({ onChange }) => {
 	const handleInputChange = (e) => {
-		const { name, value } = e.target; // Use input's `name` attribute to identify the field
+		const { name, value } = e.target;
 		onChange(name, value);
 	};
-	// Update the specific field in parent state
+
 	return (
 		<div className="generalInfo">
 			<div className="head">
 				<h2>
 					<span>1</span>General Information
 				</h2>
-				<About
-					paragraph={
-						"This is a critical part of your CV as it gives the potential employer a glimpse of who you are. This is an opportunity for you to introduce yourself, highlight your skills, and provide a brief summary of your career goals."
-					}
-				/>
 			</div>
 			<form className="generalInfoForm">
 				<div className="fullname">
@@ -97,12 +92,11 @@ const GeneralInfo = ({ onChange }) => {
 
 					<label htmlFor="aboutMe">
 						About
-						<textarea
-							name="summary"
-							id="summary"
-							placeholder="Detailed description about yourself"
+						<Input
+							placeholder="about yourself"
+							name={"about"}
 							onChange={handleInputChange}
-						></textarea>
+						/>
 					</label>
 				</div>
 			</form>

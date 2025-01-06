@@ -1,36 +1,36 @@
 import "./App.css";
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import CvEdit from "./components/CvEdit";
 import CvPreview from "./components/form components/CvPreview";
-import ExampleCv from "./components/ExampleCv";
-
+import { useState } from "react";
 
 const App = () => {
-	 const [personInfo, setPersonInfo] = useState({
-			firstName: "ttt",
-			lastName: "",
-			profession: "",
-			address: "",
-			linkedIn: "",
-			portfolio: "",
-			email: "",
-			phone: "",
-			summary: "",
-		});
+	const [personInfo, setPersonInfo] = useState({
+		firstName: "",
+		lastName: "",
+		profession: "",
+		address: "",
+		linkedIn: "",
+		email: "",
+		portfolio: "",
+		phone: "",
+		about: "",
+	});
+
+	
+
+	const handleChange = (field, value) => {
+		setPersonInfo((prev) => ({ ...prev, [field]: value }));
+	};
+
 	return (
-		<Router>
-			<Header personInfo={personInfo} />
-			<Routes>
-				<Route path="/ " element={<CvEdit setPersonInfo={setPersonInfo} />} />
-				<Route
-					path="/preview"
-					element={<CvPreview personInfo={personInfo} />}
-				/>
-				<Route path="/example" element={<ExampleCv/>}/>
-			</Routes>
-		</Router>
+		<div>
+			<Header />
+			<div className="container">
+				<CvEdit onChange={handleChange} />
+				<CvPreview generalData={personInfo} />
+			</div>
+		</div>
 	);
 };
 
