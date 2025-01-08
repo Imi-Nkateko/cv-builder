@@ -1,15 +1,15 @@
 import "./CvPreview.css";
 
 
-const CvPreview = ({generalData, educationdata, experienceData}) => {
-
+const CvPreview = ({generalData, educationdata, experienceData, onEduDelete, onExpDelete}) => {
+	
 	return (
 		<div className="page">
 			<div className="general-info">
 				<h1>{generalData.firstName + " " + generalData.lastName}</h1>
 
 				<p className="profession">{generalData.profession}</p>
-
+				<p>{generalData.address}</p>
 				<div className="contact">
 					<p>{generalData.linkedIn}</p>
 					<p>{generalData.email}</p>
@@ -38,6 +38,7 @@ const CvPreview = ({generalData, educationdata, experienceData}) => {
 								<p>
 									<strong>End Date:</strong> {educationEntry.eduEndDate}
 								</p>
+								<button onClick={() => onEduDelete(index)}>Delete</button>
 								<hr />
 							</div>
 						))}
@@ -58,10 +59,10 @@ const CvPreview = ({generalData, educationdata, experienceData}) => {
 									<strong>{experienceEntry.jobDescription}</strong>
 								</p>
 							</p>
+							<button onClick={() => onExpDelete(index)}>Delete</button>
 						</div>
 					))}
 				</div>
-			
 			</section>
 		</div>
 	);

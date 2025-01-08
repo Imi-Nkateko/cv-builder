@@ -75,6 +75,7 @@ const GeneralInfo = ({ onChange }) => {
 							placeholder={"Email Address"}
 							name={"email"}
 							onChange={handleInputChange}
+							type={"email"}
 						/>
 					</label>
 
@@ -84,6 +85,7 @@ const GeneralInfo = ({ onChange }) => {
 							placeholder={"Your Phone Number"}
 							name={"phone"}
 							onChange={handleInputChange}
+							type={"number"}
 						/>
 					</label>
 

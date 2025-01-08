@@ -79,6 +79,14 @@ const App = () => {
 		e.target.reset();
 	};
 
+	const handleEduDelete = (index) => {
+		setEducationList((prevList) => prevList.filter((_, i) => i !== index));
+	};
+
+	const handleExpDelete = (index) => {
+		setExperienceList((prevList) => prevList.filter((_, i) => i !== index));
+	};
+
 	const handleChange = (field, value) => {
 		setPersonInfo((prev) => ({ ...prev, [field]: value }));
 	};
@@ -87,8 +95,20 @@ const App = () => {
 		<div>
 			<Header />
 			<div className="container">
-				<CvEdit onChange={handleChange} handleSubmit={handleSubmit} handleChangeEdu={handleChangeEdu} handleChangeExp={handleChangeExp}  handleExpSubmit={handleExpSubmit}/>
-				<CvPreview generalData={personInfo} educationdata={educationList} experienceData={experienceList} />
+				<CvEdit
+					onChange={handleChange}
+					handleSubmit={handleSubmit}
+					handleChangeEdu={handleChangeEdu}
+					handleChangeExp={handleChangeExp}
+					handleExpSubmit={handleExpSubmit}
+				/>
+				<CvPreview
+					generalData={personInfo}
+					educationdata={educationList}
+					experienceData={experienceList}
+					onEduDelete={handleEduDelete}
+					onExpDelete={handleExpDelete}
+				/>
 			</div>
 		</div>
 	);

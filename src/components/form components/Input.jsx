@@ -1,7 +1,16 @@
 import PropTypes from "prop-types";
 
-const Input = ({ placeholder, id,  onChange, name }) => {
-	return <input type="text" placeholder={placeholder} id={id}  onChange={onChange} name={name}/>;
+const Input = ({ placeholder, id,  onChange, name, type, required  }) => {
+	return (
+		<input
+			type={type}
+			placeholder={placeholder}
+			id={id}
+			onChange={onChange}
+			name={name}
+			required={required}
+		/>
+	);
 };
 
 Input.propTypes = {

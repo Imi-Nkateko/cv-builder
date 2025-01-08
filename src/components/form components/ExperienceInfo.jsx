@@ -10,7 +10,7 @@ const ExperienceInfo = ({ handleExpSubmit, handleChangeExp }) => {
 				<div className="experienceContainer">
 					<label htmlFor="companyName">
 						Company Name
-						<Input name={"companyName"} onChange={handleChangeExp} />
+						<Input name={"companyName"} onChange={handleChangeExp} required />
 					</label>
 					<label htmlFor="title">
 						Title
@@ -18,11 +18,20 @@ const ExperienceInfo = ({ handleExpSubmit, handleChangeExp }) => {
 					</label>
 					<label htmlFor="startDate">
 						Start Date
-						<Input name={"expStartDate"} onChange={handleChangeExp} />
+						<Input
+							name={"expStartDate"}
+							onChange={handleChangeExp}
+							type={"date"}
+							required
+						/>
 					</label>
 					<label htmlFor="endDate">
 						End Date
-						<Input name={"expEndDate"} onChange={handleChangeExp} />
+						<Input
+							name={"expEndDate"}
+							onChange={handleChangeExp}
+							type={"date"}
+						/>
 					</label>
 				</div>
 				<label htmlFor="jobDescription">
