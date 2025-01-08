@@ -1,7 +1,7 @@
 import "./CvPreview.css";
 
 
-const CvPreview = ({generalData}) => {
+const CvPreview = ({generalData, educationdata, experienceData}) => {
 
 	return (
 		<div className="page">
@@ -21,20 +21,47 @@ const CvPreview = ({generalData}) => {
 				<div className="left-container">
 					<h2>Summary</h2>
 					<p>{generalData.about}</p>
-					<div className="education">
-						<h2>Education</h2>
-						<h3>
-							Odin Xyz <span>2010 jun - 2020</span>
-						</h3>
-						<h4>Fullstack Web Developer</h4>
+
+					<div className="preview">
+						<h3>Education Preview</h3>
+						{educationdata.map((educationEntry, index) => (
+							<div key={index} className="educationEntry">
+								<p>
+									<strong>School Name:</strong> {educationEntry.schoolName}
+								</p>
+								<p>
+									<strong>Degree:</strong> {educationEntry.degree}
+								</p>
+								<p>
+									<strong>Start Date:</strong> {educationEntry.eduStartDate}
+								</p>
+								<p>
+									<strong>End Date:</strong> {educationEntry.eduEndDate}
+								</p>
+								<hr />
+							</div>
+						))}
 					</div>
-					<h2>Experience</h2>
+					<h3>Experience</h3>
+					{experienceData.map((experienceEntry, index) => (
+						<div key={index} className="experienceEntry">
+							<h4>{experienceEntry.companyName}</h4>
+							<p>
+								<strong>{experienceEntry.title}</strong>
+							</p>
+							<p>
+								<strong>{experienceEntry.expStartDate}</strong>
+								<p>
+									<strong>{experienceEntry.expEndDate}</strong>
+								</p>
+								<p>
+									<strong>{experienceEntry.jobDescription}</strong>
+								</p>
+							</p>
+						</div>
+					))}
 				</div>
-				<div className="right-container">
-					<h2>Projects</h2>
-					<h2>Skills</h2>
-					<h2>Interests</h2>
-				</div>
+			
 			</section>
 		</div>
 	);

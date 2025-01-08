@@ -2,8 +2,16 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color:  #970747;
+
 	padding: 1rem 2rem;
+}
+
+header h1 {
+	color: #76ABAE;
+}
+
+body {
+	background-color: #070707;
 }
 
 ul {
@@ -22,5 +30,10 @@ a {
 }
 
 a:hover {
-	color:  #ec84b3;
+	color: #ec84b3;
+}
+
+button {
+	width: 90px;
+	padding: 8px;
 }

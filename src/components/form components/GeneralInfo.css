@@ -36,7 +36,6 @@
 	border: 1px solid rgba(0, 0, 0, 0.267);
 	border-radius: 8px;
 	outline: none;
-
 }
 
 .SkillsInfoForm {
@@ -44,26 +43,24 @@
 	border-radius: 8px;
 	outline: none;
 	padding: 1rem;
-
 }
 
 .head {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
 }
-span {
+/* span {
 	border-radius: 50%;
 	background-color: palegreen;
 	padding: 5px;
 	font-weight: 900;
-}
+} */
 
 h2 {
-	font-weight: 100;
+	font-weight: 900;
 	padding-bottom: 1rem;
-	color: #970747;
+	color: #178582;
 }
 
 p {
@@ -76,7 +73,10 @@ p {
 	display: grid;
 }
 
-.generalInfoForm {
+.generalInfoForm,
+.educationInfoForm,
+.educationInfo,
+.experienceInfoForm {
 	border: 1px solid rgba(0, 0, 0, 0.267);
 	border-radius: 8px;
 	outline: none;
@@ -84,7 +84,8 @@ p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: rgba(255, 255, 255, 0.973);
+	background-color: #222831;
+	margin: 1rem;
 }
 
 .fullname {
@@ -96,6 +97,7 @@ p {
 .contact-container {
 	display: grid;
 	grid-template-columns: 2fr 2fr;
+	gap: 10px;
 }
 
 input {
@@ -103,9 +105,10 @@ input {
 	padding: 8px;
 	border-radius: 4px;
 	outline: none;
-	border: 1px solid rgb(191, 255, 191);
-	background-color: rgba(112, 128, 144, 0.151);
+	border: none;
+	background-color: #31363f9c;
 	width: 180px;
+	color: #ffffffc2;
 }
 
 textarea {
@@ -113,11 +116,20 @@ textarea {
 	outline: none;
 	border: 1px solid rgb(191, 255, 191);
 	background-color: rgba(112, 128, 144, 0.151);
-	width: 400px;
-	height: 200px;
+	background-color: #31363f9c;
+	color: #ffffffc2;
+	margin-bottom: 1rem;
 }
 
 label {
 	display: grid;
 	font-weight: 900;
+	color: #eee;
 }
+
+.experienceContainer, .educationInfo {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	gap: 10px;
+}
+

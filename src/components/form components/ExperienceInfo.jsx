@@ -1,37 +1,44 @@
 import Input from "./Input";
 
-const ExperienceInfo = () => {
-  return (
-		<div className="educationInfo">
+const ExperienceInfo = ({ handleExpSubmit, handleChangeExp }) => {
+	return (
+		<div className="experienceInfoForm">
 			<div className="head">
-				<h2>
-					<span>2</span>Experience Information
-				</h2>
+				<h2>Experience Information</h2>
 			</div>
-			<form action="" className="experienceInfoForm">
-				<label htmlFor="companyName">
-					Company Name
-					<Input />
-				</label>
-				<label htmlFor="title">
-					Title
-					<Input />
-				</label>
-				<label htmlFor="startDate">
-					Start Date
-					<Input />
-				</label>
-				<label htmlFor="endDate">
-					End Date
-					<Input />
-				</label>
+			<form action="" onSubmit={handleExpSubmit} className="expriencForm">
+				<div className="experienceContainer">
+					<label htmlFor="companyName">
+						Company Name
+						<Input name={"companyName"} onChange={handleChangeExp} />
+					</label>
+					<label htmlFor="title">
+						Title
+						<Input name={"title"} onChange={handleChangeExp} />
+					</label>
+					<label htmlFor="startDate">
+						Start Date
+						<Input name={"expStartDate"} onChange={handleChangeExp} />
+					</label>
+					<label htmlFor="endDate">
+						End Date
+						<Input name={"expEndDate"} onChange={handleChangeExp} />
+					</label>
+				</div>
 				<label htmlFor="jobDescription">
-                    About Job
-					<textarea name="jobDescription" id=""></textarea>
+					About Job
+					<textarea
+						name="jobDescription"
+						onChange={handleChangeExp}
+						id=""
+						rows={"5"}
+						cols={"33"}
+					></textarea>
 				</label>
+				<button>Add Experience</button>
 			</form>
 		</div>
 	);
-}
+};
 
-export default ExperienceInfo
+export default ExperienceInfo;

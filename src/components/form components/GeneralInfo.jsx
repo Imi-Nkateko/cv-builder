@@ -10,12 +10,10 @@ const GeneralInfo = ({ onChange }) => {
 
 	return (
 		<div className="generalInfo">
-			<div className="head">
-				<h2>
-					<span>1</span>General Information
-				</h2>
-			</div>
 			<form className="generalInfoForm">
+				<div className="head">
+					<h2>General Information</h2>
+				</div>
 				<div className="fullname">
 					<label htmlFor="firstName">
 						FirstName
@@ -35,25 +33,24 @@ const GeneralInfo = ({ onChange }) => {
 					</label>
 				</div>
 
-				<label htmlFor="profession">
-					Profession
-					<Input
-						placeholder={"Profession"}
-						name={"profession"}
-						onChange={handleInputChange}
-					/>
-				</label>
-
-				<label htmlFor="address">
-					Address
-					<Input
-						placeholder={"Enter Address"}
-						name={"address"}
-						onChange={handleInputChange}
-					/>
-				</label>
-
 				<div className="contact-container">
+					<label htmlFor="profession">
+						Profession
+						<Input
+							placeholder={"Profession"}
+							name={"profession"}
+							onChange={handleInputChange}
+						/>
+					</label>
+
+					<label htmlFor="address">
+						Address
+						<Input
+							placeholder={"Enter Address"}
+							name={"address"}
+							onChange={handleInputChange}
+						/>
+					</label>
 					<label htmlFor="linkedIn">
 						LinkedIn
 						<Input
@@ -92,11 +89,12 @@ const GeneralInfo = ({ onChange }) => {
 
 					<label htmlFor="aboutMe">
 						About
-						<Input
+						<textarea
+							id=""
 							placeholder="about yourself"
 							name={"about"}
 							onChange={handleInputChange}
-						/>
+						></textarea>
 					</label>
 				</div>
 			</form>

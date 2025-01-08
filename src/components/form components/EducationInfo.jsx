@@ -1,36 +1,35 @@
 import Input from "./Input";
 import "./GeneralInfo.css";
 
-const EducationInfo = () => {
+const EducationInfo = ({ handleSubmit, handleChangeEdu }) => {
 	return (
-		<div className="educationInfo">
-			<div className="head">
-				<h2>
-					<span>2</span>Education Information
-				</h2>
-			</div>
 			<div action="" className="educationInfoForm">
-				<form action="">
+				<div className="head">
+					<h2>
+						Education Information
+					</h2>
+				</div>
+				<form action="" onSubmit={handleSubmit} className="educationInfo">
 					<label htmlFor="schoolName">
 						School Name
-						<Input />
+						<Input name={"schoolName"} onChange={handleChangeEdu} />
 					</label>
 					<label htmlFor="title">
 						Degree, Institution, Title
-						<Input />
+						<Input name={"degree"} onChange={handleChangeEdu} />
 					</label>
 					<label htmlFor="startDate">
 						Start Date
-						<Input />
+						<Input name={"eduStartDate"} onChange={handleChangeEdu} />
 					</label>
 					<label htmlFor="endDate">
 						End Date
-						<Input />
+						<Input name={"eduEndDate"} onChange={handleChangeEdu} />
 					</label>
+					<button>Add Education</button>
 				</form>
-				<button>Add Education</button>
 			</div>
-		</div>
+		
 	);
 };
 
