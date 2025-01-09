@@ -3,8 +3,8 @@
 The CV-Builder is a user-friendly tool built with React that enables individuals to effortlessly create and customize their CV online. With features like input fields for general information, sections for work experience and education, and a real-time CV preview, users can easily tailor their CV to highlight their skills and achievements. Additionally, the application allows users to download their CV as a PDF, providing a convenient way to save and share their professional profile with potential employers.
 
 # Live demo
-
-The live demo for appliction is [here](cv-builder-five-taupe.vercel.app)
+[1]: https://cv-builder-five-taupe.vercel.app           "here"
+The live demo for appliction is [here][1]
 
 
 # Screenshot for Application
