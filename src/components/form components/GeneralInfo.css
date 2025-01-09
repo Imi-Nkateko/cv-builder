@@ -1,14 +1,13 @@
 .generalInfo {
-	/* padding: 1.5rem; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 1rem;
 }
 
 .educationInfo,
 .experienceInfo,
 .SkillsInfo {
-	/* padding: 1.5rem; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -16,12 +15,9 @@
 
 .educationInfoForm {
 	display: grid;
-	/* gap: 2rem; */
 	border: 1px solid rgba(0, 0, 0, 0.267);
 	border-radius: 8px;
 	outline: none;
-	/* padding: 1rem; */
-	/* min-width: 600px; */
 }
 
 .educationInfoForm form {
@@ -31,8 +27,7 @@
 
 .experienceInfoForm {
 	display: grid;
-	/* grid-template-columns: 3fr 2fr; */
-	/* gap: 2rem; */
+
 	border: 1px solid rgba(0, 0, 0, 0.267);
 	border-radius: 8px;
 	outline: none;
@@ -50,12 +45,6 @@
 	align-items: center;
 	justify-content: space-between;
 }
-/* span {
-	border-radius: 50%;
-	background-color: palegreen;
-	padding: 5px;
-	font-weight: 900;
-} */
 
 h2 {
 	font-weight: 900;
@@ -76,7 +65,7 @@ p {
 .generalInfoForm,
 .educationInfoForm,
 .educationInfo,
-.experienceInfoForm {
+.experienceInfoForm,.experienceInfoFor {
 	border: 1px solid rgba(0, 0, 0, 0.267);
 	border-radius: 8px;
 	outline: none;
@@ -127,7 +116,7 @@ label {
 	color: #eee;
 }
 
-.experienceContainer, .educationInfo {
+.experienceContainer {
 	display: grid;
 	grid-template-columns: 2fr 2fr;
 	gap: 10px;

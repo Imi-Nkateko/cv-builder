@@ -96,6 +96,9 @@ const GeneralInfo = ({ onChange }) => {
 							placeholder="about yourself"
 							name={"about"}
 							onChange={handleInputChange}
+							wrap="off"
+							cols="30"
+							rows="5"
 						></textarea>
 					</label>
 				</div>

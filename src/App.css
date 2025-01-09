@@ -1,16 +1,19 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	margin: 1rem;
 }
 
-/* .cvEdit {
-    display: flex;
-    flex-direction: column;
-} */
+@media screen and (max-width: 1000px) {
+	.container {
+		display: flex;
+        flex-direction: column;
+		margin: 0.5rem;
+	}
+}

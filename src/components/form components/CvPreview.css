@@ -1,12 +1,12 @@
 .page {
-	height: 150vh;
+	height: 130vh;
 	margin-inline: 2rem;
-	background-color: #EEE;
+	background-color: #eee;
 	border: 1px solid rgba(0, 0, 0, 0.432);
 	padding: 2rem;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
-
+	min-width: 650px;
 }
 
 .genaral-info {
@@ -36,9 +36,52 @@ h1 {
 	color: rgba(0, 0, 0, 0.596);
 }
 
-
-
-.cv-info {
+.educationEntry,
+.experienceEntry {
 	display: flex;
-    justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+.deletbtn {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	padding: 10px;
+	background-color: silver;
+	cursor: pointer;
+
+	border: none;
+	outline: none;
+	color: #eee;
+	font-weight: 500;
+	margin-inline: 10px;
+}
+
+.deletbtn:hover {
+	background-color: #ff3030;
+}
+
+.preview {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 2fr 2fr;
+	gap: 2rem;
+}
+
+.about {
+	max-width: 600px;
+	word-wrap: break-word;
+}
+
+main {
+	display: flex;
+	align-items: start;
+}
+
+@media screen and (max-width: 1000px) {
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 }

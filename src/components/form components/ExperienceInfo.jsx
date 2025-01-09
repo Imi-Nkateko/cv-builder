@@ -6,7 +6,7 @@ const ExperienceInfo = ({ handleExpSubmit, handleChangeExp }) => {
 			<div className="head">
 				<h2>Experience Information</h2>
 			</div>
-			<form action="" onSubmit={handleExpSubmit} className="expriencForm">
+			<form action="" onSubmit={handleExpSubmit} className="exprienceForm">
 				<div className="experienceContainer">
 					<label htmlFor="companyName">
 						Company Name
@@ -40,8 +40,9 @@ const ExperienceInfo = ({ handleExpSubmit, handleChangeExp }) => {
 						name="jobDescription"
 						onChange={handleChangeExp}
 						id=""
-						rows={"5"}
-						cols={"33"}
+						wrap="off"
+						cols="30"
+						rows="5"
 					></textarea>
 				</label>
 				<button>Add Experience</button>

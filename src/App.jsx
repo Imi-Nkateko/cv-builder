@@ -6,15 +6,15 @@ import { useState } from "react";
 
 const App = () => {
 	const [personInfo, setPersonInfo] = useState({
-		firstName: "",
-		lastName: "",
-		profession: "",
-		address: "",
-		linkedIn: "",
-		email: "",
-		portfolio: "",
-		phone: "",
-		about: "",
+		firstName: "Your FirstName",
+		lastName: "Your LastName",
+		profession: "Your Profession",
+		address: "Your Location",
+		linkedIn: "LinkedIn Accoun",
+		email: "Email Address",
+		portfolio: "Portfolio Website",
+		phone: "Contact Number",
+		about: "A brief summary about your self, skills and experience ",
 	});
 
 	const [educationInfo, SetEducationInfo] = useState({
@@ -29,9 +29,9 @@ const App = () => {
 		title: "",
 		expStartdate: "",
 		expEndDate: "",
-		jobDescription: ""
-	})
-	const [experienceList, setExperienceList] = useState([])
+		jobDescription: "",
+	});
+	const [experienceList, setExperienceList] = useState([]);
 
 	const [educationList, setEducationList] = useState([]);
 
@@ -44,12 +44,12 @@ const App = () => {
 	};
 
 	const handleChangeExp = (e) => {
-		const {name, value} = e.target;
+		const { name, value } = e.target;
 		setExperienceInfo((prevExpData) => ({
 			...prevExpData,
 			[name]: value,
-		}))
-	}
+		}));
+	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
